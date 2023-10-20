@@ -45,6 +45,6 @@ ul {
 }
 
 li span[style*="line-through"] {
-    color: red;
+    color: #9beb08;
     opacity: 0.7;
 }
