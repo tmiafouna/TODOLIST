@@ -16,6 +16,13 @@ function addTodo() {
     editBtn.onclick = function () {
       editTodo(todoEl);
     };
+    // Bouton de suppression
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "Supprimer";
+    deleteBtn.onclick = function() {
+        deleteTodo(todoEl);
+    };
+    todoEl.appendChild(deleteBtn);
     todoEl.appendChild(editBtn);
     todoList.appendChild(todoEl);
     todoInput.value = "";
@@ -48,4 +55,7 @@ function editTodo(todoEl) {
       };
       todoEl.appendChild(editBtn);
   }
+}
+function deleteTodo(todoEl) {
+    todosList.removeChild(todoEl);
 }
